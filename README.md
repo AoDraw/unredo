@@ -49,7 +49,14 @@ Command 就是一个用户操作的执行和回滚的基本单元。对于一个
 
 ## CommandManager
 
-用户的一系列操作可能由不同的 Command 组合而成，`CommandManager` 就是帮助你维护用户在这一系列操作当中的的撤销、重做。一个用户场景一般来说你只需要实例化一个 `CommandManager` 就够了。`CommandManager` 有几个方法 `add`、`backwards`、`forwards`。用法就是：只要用户进行操作了，你就用 CommandManager 往里面 `add()` Command，用户撤销就 `backwards()`，用户重做就 `forwards()`
+用户的一系列操作可能由不同的 Command 组合而成，`CommandManager` 就是帮助你维护用户在这一系列操作当中的的撤销、重做。一个用户场景一般来说你只需要实例化一个 `CommandManager` 就够了。`CommandManager` 有几个方法
+
+* `add`
+* `backwards`
+* `forwards`
+* `clear`
+
+用法就是：只要用户进行操作了，你就用 CommandManager 往里面 `add` Command，用户撤销就 `backwards()`，用户重做就 `forwards()`；要重置和清空所有历史操作就用 `clear()`。
 
 ```javascript
 import { Command, CommandManager } from 'unredo'
