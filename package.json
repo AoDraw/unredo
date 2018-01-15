@@ -1,0 +1,26 @@
+{
+  "name": "unredo2",
+  "version": "0.1.0",
+  "description": "Undo &amp; Redo Action in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AoDraw/unredo.git"
+  },
+  "keywords": [
+    "commander",
+    "pattern"
+  ],
+  "author": "AoDraw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AoDraw/unredo/issues"
+  },
+  "homepage": "https://github.com/AoDraw/unredo#readme",
+  "devDependencies": {
+    "ava": "^0.24.0"
+  }
+}
